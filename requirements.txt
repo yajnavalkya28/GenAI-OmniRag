@@ -1,0 +1,16 @@
+streamlit
+langchain
+langchain-groq
+langchain-community
+langchain-huggingface
+faiss-cpu
+pypdf
+python-docx
+youtube-transcript-api
+pillow
+pytesseract
+beautifulsoup4
+requests
+sentence-transformers
+gTTS
+Markdown
