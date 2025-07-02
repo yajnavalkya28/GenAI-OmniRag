@@ -10,6 +10,7 @@ Features
 6. Multi-language support for UI and content (translation via Groq)
 7. Text-to-Speech for the summary (with robust Markdown cleaning for natural audio)
 8. Indian language support (Telugu, Tamil, Hindi)
+9. Enhanced error handling for OCR and document processing
 """
 
 from __future__ import annotations
@@ -35,6 +36,9 @@ from PIL import Image
 from gtts import gTTS
 import markdown
 import pytesseract, requests, bs4
+
+# Explicitly set tesseract path for deployed environments
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Configuration & Constants
@@ -160,14 +164,23 @@ def sha256_of_bytes(b: bytes) -> str:
 def doc_id_from_source(src: str | bytes) -> str: 
     return sha256_of_bytes(src.encode()) if isinstance(src, str) else sha256_of_bytes(src)
 
-def load_pdf(path: str) -> List[Document]: 
-    return PyPDFLoader(path).load()
+def load_pdf(path: str) -> List[Document]:
+    docs = PyPDFLoader(path).load()
+    if not docs or all(not doc.page_content.strip() for doc in docs):
+        return [Document(page_content="(Empty or scanned PDF — no text found.)", metadata={"source": path})]
+    return docs
 
 def load_docx(path: str) -> List[Document]: 
     return [Document(page_content="\n".join(p.text for p in DocxDoc(path).paragraphs), metadata={"source": path})]
 
-def load_image(path: str) -> List[Document]: 
-    return [Document(page_content=pytesseract.image_to_string(Image.open(path)), metadata={"source": path})]
+def load_image(path: str) -> List[Document]:
+    try:
+        text = pytesseract.image_to_string(Image.open(path))
+        if not text.strip():
+            raise ValueError("OCR found no readable text in the image.")
+        return [Document(page_content=text, metadata={"source": path})]
+    except Exception as e:
+        return [Document(page_content=f"(Error reading image: {e})", metadata={"source": path})]
 
 def load_youtube(url: str) -> List[Document]:
     try:
@@ -203,6 +216,8 @@ def get_or_build_index(_docs: List[Document], doc_key: str) -> FAISS:
     """Build FAISS index with Streamlit caching"""
     with st.spinner("⚙️ Indexing content... (this may take a moment)"):
         chunks = SPLITTER.split_documents(_docs)
+        if not chunks:
+            raise ValueError("Indexing failed: No text chunks were created from the document.")
         index = FAISS.from_documents(chunks, EMBEDDER)
     return index
 
@@ -360,9 +375,13 @@ if process_btn:
         st.error("No valid content could be processed.")
         st.stop()
 
-    # Use Streamlit caching for the key generation and index building
+    # Use Streamlit caching for the key generation and index building with error handling
     full_key = get_cache_key(cache_key_components)
-    index = get_or_build_index(all_docs, full_key)
+    try:
+        index = get_or_build_index(all_docs, full_key)
+    except Exception as e:
+        st.error(f"Indexing failed: {e}")
+        st.stop()
 
     # Generate summary with caching
     @st.cache_data
@@ -392,7 +411,12 @@ if process_btn:
 # Display content if it has been processed
 if st.session_state.current_key:
     st.markdown(f"## {labels['summary_header']}")
-    st.markdown(st.session_state.summary, unsafe_allow_html=True)
+    
+    # Check if summary is blank and show warning
+    if not st.session_state.summary.strip():
+        st.warning("Summary generation returned no meaningful content.")
+    else:
+        st.markdown(st.session_state.summary, unsafe_allow_html=True)
     
     col1, col2 = st.columns([0.8, 0.2])
     with col2:
