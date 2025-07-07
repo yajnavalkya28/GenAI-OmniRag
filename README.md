@@ -1,84 +1,97 @@
-# GenAI-OmniRag
-# 🌟 GenAI-OmniRAG: Multilingual AI Document Assistant
+# ⚡ OmniRAG: Multilingual AI Document Assistant
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-url.streamlit.app)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-
-A powerful multilingual AI assistant that enables you to chat with any document using advanced RAG (Retrieval-Augmented Generation) technology. Upload PDFs, DOCX files, images, or provide web URLs/YouTube links to get instant summaries and engage in intelligent conversations about your content.
-
-## 🚀 Key Features
-
-### 📄 Universal Document Support
-- **PDF Files**: Extract and process text from PDF documents
-- **DOCX Files**: Parse Microsoft Word documents
-- **Images**: OCR support for PNG, JPG, JPEG files using Tesseract
-- **Web Pages**: Scrape and process content from any public webpage
-- **YouTube Videos**: Automatic transcript extraction and processing
-
-### 🌍 Multilingual Capabilities
-- **5 Languages Supported**: English, Spanish, Hindi, Telugu, Tamil
-- **Real-time Translation**: Powered by Groq's Llama 3 model
-- **Localized UI**: Interface adapts to selected language
-- **Text-to-Speech**: Hear summaries in your preferred language
-
-### 🧠 Advanced AI Features
-- **Intelligent Summarization**: Generate Markdown-formatted summaries with adjustable length
-- **Conversational RAG**: Chat with your documents using context-aware responses
-- **Smart Caching**: Streamlit-powered caching for faster processing
-- **Vector Search**: FAISS-based semantic search for accurate information retrieval
-
-### 📊 Export & Sharing
-- **DOCX Reports**: Professional document reports with summaries and chat history
-- **JSON Export**: Structured data export for further processing
-- **Audio Summaries**: Text-to-speech functionality for accessibility
-
-## 🛠️ Technology Stack
-
-- **Frontend**: Streamlit
-- **LLM**: Groq Llama 3 (8B-8192)
-- **Embeddings**: HuggingFace all-MiniLM-L6-v2
-- **Vector Store**: FAISS
-- **OCR**: Tesseract
-- **Document Processing**: LangChain, PyPDF, python-docx
-- **Web Scraping**: BeautifulSoup4, WebBaseLoader
-- **Audio**: Google Text-to-Speech (gTTS)
+> **Chat with any document in multiple languages** - Upload PDFs, images, web pages, or YouTube videos and get instant AI-powered insights with multilingual support.
 
 ## 📸 Screenshots
 
-> **Note**: Add your screenshots in the following locations:
-> - `screenshots/main-interface.png` - Main application interface
-> - `screenshots/document-upload.png` - Document upload process
-> - `screenshots/summary-generation.png` - Summary generation example
-> - `screenshots/chat-interface.png` - Chat interface with documents
-> - `screenshots/multilingual-support.png` - Different language interfaces
+<div align="center">
+  <img src="screenshots/main-interface.png" alt="Main Interface" width="800"/>
+  <p><em>Main application interface with document upload and language selection</em></p>
+</div>
 
-![Main Interface](screenshots/main-interface.png)
-*Main application interface with document upload options*
+<div align="center">
+  <img src="screenshots/file-upload.png" alt="File Upload" width="800"/>
+  <p><em>Multi-format file upload support (PDF, DOCX, Images) and URL input</em></p>
+</div>
 
-![Document Processing](screenshots/document-upload.png)
-*Document upload and processing workflow*
+<div align="center">
+  <img src="screenshots/document-processing.png" alt="Document Processing" width="800"/>
+  <p><em>Document processing with progress indicators and content indexing</em></p>
+</div>
 
-![Summary Generation](screenshots/summary-generation.png)
-*AI-generated summary with markdown formatting*
+<div align="center">
+  <img src="screenshots/summary-generation.png" alt="Summary Generation" width="800"/>
+  <p><em>AI-generated markdown summary with adjustable length settings</em></p>
+</div>
 
-![Chat Interface](screenshots/chat-interface.png)
-*Interactive chat interface with document context*
+<div align="center">
+  <img src="screenshots/text-to-speech.png" alt="Text-to-Speech" width="800"/>
+  <p><em>Text-to-speech functionality for hearing summaries in multiple languages</em></p>
+</div>
+
+<div align="center">
+  <img src="screenshots/chat-interface.png" alt="Interactive Chat" width="800"/>
+  <p><em>RAG-powered chat interface for querying document content</em></p>
+</div>
+
+<div align="center">
+  <img src="screenshots/multilingual-support.png" alt="Multilingual Support" width="800"/>
+  <p><em>Language selection and multilingual content translation</em></p>
+</div>
+
+<div align="center">
+  <img src="screenshots/ocr-processing.png" alt="OCR Processing" width="800"/>
+  <p><em>OCR text extraction from images using Tesseract</em></p>
+</div>
+
+<div align="center">
+  <img src="screenshots/youtube-transcript.png" alt="YouTube Processing" width="800"/>
+  <p><em>YouTube video transcript extraction and processing</em></p>
+</div>
+
+<div align="center">
+  <img src="screenshots/export-options.png" alt="Export Options" width="800"/>
+  <p><em>Session report export as DOCX and JSON formats</em></p>
+</div>
+
+<div align="center">
+  <img src="screenshots/web-scraping.png" alt="Web Scraping" width="800"/>
+  <p><em>Web page content extraction and processing</em></p>
+</div>
+
+<div align="center">
+  <img src="screenshots/error-handling.png" alt="Error Handling" width="800"/>
+  <p><em>Robust error handling for various file types and processing issues</em></p>
+</div>
+
+## 🌟 Features
+
+- **📄 Multi-format Support**: PDF, DOCX, Images (PNG, JPG), Web URLs, YouTube videos
+- **🌍 Multilingual**: Support for English, Spanish, Hindi, Telugu, and Tamil
+- **🔊 Text-to-Speech**: Hear summaries in your preferred language
+- **💬 Interactive Chat**: RAG-powered conversations with your documents
+- **📊 Smart Summarization**: Adjustable summary length with Markdown formatting
+- **📥 Export Options**: Download session reports as DOCX or JSON
+- **⚡ Lightning Fast**: Powered by Groq LPU™ inference engine
+- **🔍 OCR Support**: Extract text from images using Tesseract
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
 - Python 3.8 or higher
-- Groq API key (get one from [Groq Console](https://console.groq.com/))
 - Tesseract OCR installed on your system
+- Groq API key
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/GenAI-OmniRAG.git
-   cd GenAI-OmniRAG
+   git clone https://github.com/yajnavalkya28/GenAI-OmniRag.git
+   cd GenAI-OmniRag
    ```
 
 2. **Install Python dependencies**
@@ -86,27 +99,32 @@ A powerful multilingual AI assistant that enables you to chat with any document 
    pip install -r requirements.txt
    ```
 
-3. **Install system dependencies (for OCR)**
-   
+3. **Install Tesseract OCR**
+
    **Ubuntu/Debian:**
    ```bash
    sudo apt-get update
    sudo apt-get install tesseract-ocr tesseract-ocr-eng libtesseract-dev
    ```
-   
+
    **macOS:**
    ```bash
    brew install tesseract
    ```
-   
-   **Windows:**
-   Download and install from [GitHub Tesseract releases](https://github.com/UB-Mannheim/tesseract/wiki)
 
-4. **Configure API key**
+   **Windows:**
+   Download and install from [Tesseract GitHub releases](https://github.com/UB-Mannheim/tesseract/wiki)
+
+4. **Set up environment variables**
    
-   Create a `.streamlit/secrets.toml` file in your project root:
+   Create a `.streamlit/secrets.toml` file:
    ```toml
-   GROQ_API_KEY = "your-groq-api-key-here"
+   GROQ_API_KEY = "your_groq_api_key_here"
+   ```
+
+   Or set environment variable:
+   ```bash
+   export GROQ_API_KEY="your_groq_api_key_here"
    ```
 
 5. **Run the application**
@@ -114,13 +132,51 @@ A powerful multilingual AI assistant that enables you to chat with any document 
    streamlit run app.py
    ```
 
-6. **Access the application**
-   
-   Open your browser and navigate to `http://localhost:8501`
+## 🎯 Usage
+
+### 1. **Add Content**
+   - Upload files: PDF, DOCX, or image files
+   - Paste URLs: Web pages or YouTube video links
+   - Multiple files supported simultaneously
+
+### 2. **Configure Settings**
+   - Select your preferred language
+   - Adjust summary length (100-1000 words)
+
+### 3. **Process & Interact**
+   - Click "Process Content" to analyze your documents
+   - Review the AI-generated summary
+   - Chat with your content using natural language
+   - Listen to summaries with text-to-speech
+
+### 4. **Export Results**
+   - Download session reports as DOCX or JSON
+   - Share insights with your team
+
+## 🛠️ Technical Architecture
+
+### Core Components
+
+- **Document Processing**: Multi-format loaders with OCR support
+- **Embedding Model**: HuggingFace `all-MiniLM-L6-v2` for semantic search
+- **Vector Store**: FAISS for efficient similarity search
+- **Language Model**: Groq's Llama 3 (8B parameters) for chat and summarization
+- **Translation**: AI-powered translation for multilingual support
+- **Caching**: Streamlit's built-in caching for performance optimization
+
+### Supported Languages
+
+| Language | Code | UI Support | TTS Support |
+|----------|------|------------|-------------|
+| English  | en   | ✅         | ✅          |
+| Spanish  | es   | ✅         | ✅          |
+| Hindi    | hi   | ✅         | ✅          |
+| Telugu   | te   | ✅         | ✅          |
+| Tamil    | ta   | ✅         | ✅          |
 
 ## 📋 Requirements
 
-### Python Dependencies (`requirements.txt`)
+### Python Dependencies
 ```
 streamlit
 langchain
@@ -140,63 +196,44 @@ gTTS
 Markdown
 ```
 
-### System Dependencies (`packages.txt`)
+### System Dependencies
 ```
 tesseract-ocr
 tesseract-ocr-eng
 libtesseract-dev
 ```
 
-## 🎯 Usage Guide
-
-### 1. Upload Content
-- **Files**: Drag and drop PDF, DOCX, or image files
-- **URLs**: Paste web page or YouTube video URLs
-- **Multiple Sources**: Process multiple documents simultaneously
-
-### 2. Configure Settings
-- **Summary Length**: Adjust summary word count (100-1000 words)
-- **Language**: Select your preferred language for interface and output
-
-### 3. Process & Interact
-- Click "Process Content" to analyze your documents
-- Review the AI-generated summary
-- Use the chat interface to ask questions about your content
-- Listen to audio summaries with text-to-speech
-
-### 4. Export Results
-- **DOCX**: Download professional reports with summaries and chat history
-- **JSON**: Export structured data for further analysis
-
 ## 🔧 Configuration
 
 ### Environment Variables
-```bash
-GROQ_API_KEY=your_groq_api_key_here
+
+- `GROQ_API_KEY`: Your Groq API key (required)
+
+### Streamlit Configuration
+
+Create `.streamlit/config.toml` for custom settings:
+```toml
+[theme]
+primaryColor = "#FF6B6B"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F2F6"
+textColor = "#262730"
+
+[server]
+maxUploadSize = 200
 ```
-
-### Supported File Types
-- **Documents**: `.pdf`, `.docx`
-- **Images**: `.png`, `.jpg`, `.jpeg`
-- **Web Content**: Any public webpage URL
-- **Video**: YouTube video URLs
-
-### Language Support
-- **English** (en)
-- **Spanish** (es) 
-- **Hindi** (hi)
-- **Telugu** (te)
-- **Tamil** (ta)
 
 ## 🚀 Deployment
 
 ### Streamlit Cloud
+
 1. Fork this repository
 2. Connect your GitHub account to [Streamlit Cloud](https://streamlit.io/cloud)
 3. Deploy your app
-4. Add your `GROQ_API_KEY` in the Streamlit Cloud secrets management
+4. Add your `GROQ_API_KEY` in the app settings
 
-### Docker Deployment
+### Docker
+
 ```dockerfile
 FROM python:3.9-slim
 
@@ -207,20 +244,14 @@ RUN apt-get update && apt-get install -y \
     libtesseract-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
 WORKDIR /app
-
-# Copy requirements and install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-# Copy application code
 COPY . .
 
-# Expose port
 EXPOSE 8501
 
-# Run the application
 CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
 ```
 
@@ -228,92 +259,58 @@ CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0
 
 We welcome contributions! Please follow these steps:
 
-1. **Fork the repository**
-2. **Create a feature branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. **Make your changes**
-4. **Add tests** (if applicable)
-5. **Commit your changes**
-   ```bash
-   git commit -am 'Add some feature'
-   ```
-6. **Push to the branch**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-7. **Create a Pull Request**
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-### Development Guidelines
-- Follow PEP 8 style guidelines
-- Add docstrings to functions and classes
-- Update README.md if needed
-- Test your changes thoroughly
+### Development Setup
 
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**1. Tesseract not found**
 ```bash
-# Make sure Tesseract is installed and in PATH
-tesseract --version
+# Clone your fork
+git clone https://github.com/yourusername/GenAI-OmniRag.git
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run tests (if available)
+python -m pytest tests/
 ```
 
-**2. API Key errors**
-- Verify your Groq API key is correctly set in `.streamlit/secrets.toml`
-- Check if the API key has proper permissions
+## 📄 License
 
-**3. Memory issues with large documents**
-- Reduce chunk size in the text splitter
-- Process documents in smaller batches
-
-**4. OCR accuracy issues**
-- Ensure images are clear and high resolution
-- Consider preprocessing images for better OCR results
-
-### Getting Help
-- **Issues**: Report bugs via [GitHub Issues](https://github.com/yourusername/GenAI-OmniRAG/issues)
-- **Discussions**: Join our [GitHub Discussions](https://github.com/yourusername/GenAI-OmniRAG/discussions)
-- **Documentation**: Check our [Wiki](https://github.com/yourusername/GenAI-OmniRAG/wiki)
-
-
+This project is open source and available under no specific license.
 
 ## 🙏 Acknowledgments
 
-- **Groq** for providing high-speed LLM inference
-- **Streamlit** for the amazing web framework
-- **LangChain** for RAG capabilities
-- **HuggingFace** for embeddings models
-- **Open Source Community** for various libraries and tools
+- **Groq** for the blazing-fast LPU™ inference engine
+- **Langchain** for the RAG framework
+- **Streamlit** for the beautiful web interface
+- **HuggingFace** for embedding models
+- **Tesseract** for OCR capabilities
 
-## 📈 Roadmap
+## 📞 Support
 
-- [ ] Support for more file formats (Excel, PowerPoint, etc.)
-- [ ] Advanced chart and graph generation
-- [ ] Multi-user collaboration features
-- [ ] Custom embedding models
-- [ ] Enhanced security features
-- [ ] Mobile app development
-- [ ] API endpoint creation
+- 🐛 **Bug Reports**: [Create an issue](https://github.com/yajnavalkya28/GenAI-OmniRag/issues)
+- 💡 **Feature Requests**: [Start a discussion](https://github.com/yajnavalkya28/GenAI-OmniRag/discussions)
+- 📧 **Contact**: [yajnavalkyamaddi2006@gmail.com](mailto:yajnavalkyamaddi2006@gmail.com)
 
-### 🌟 Star to Get Updates!
-Star this repository to receive notifications about:
-- 🚀 New features and updates
-- 🐛 Bug fixes and improvements  
-- 📚 Documentation updates
-- 💡 Usage tips and tricks
+## 🗺️ Roadmap
 
-[⭐ Star Now!](https://github.com/yajnavalkya28/GenAI-OmniRAG)
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/GenAI-OmniRAG&type=Date)](https://star-history.com/#yourusername/GenAI-OmniRAG&Date)
+- [ ] Add more language support
+- [ ] Implement document comparison features
+- [ ] Add support for audio files
+- [ ] Integrate with cloud storage services
+- [ ] Add user authentication
+- [ ] Implement collaborative features
 
 ---
 
-**Made with ❤️ by Yajnavalkya**
-
-*If you find this project helpful, please consider giving it a star ⭐*
-
+<div align="center">
+  <strong>Made with ❤️ by Yajnavalkya</strong>
+</div>
