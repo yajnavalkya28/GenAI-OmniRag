@@ -225,7 +225,13 @@ Then open a Pull Request.
 - 📧 [yajnavalkyamaddi2006@gmail.com](mailto:yajnavalkyamaddi2006@gmail.com)
 
 ---
+## ⭐ Love OmniRAG?
 
+If you find it helpful, smash that ⭐ on GitHub and support the project!
+
+[![⭐ Star on GitHub](https://img.shields.io/github/stars/yajnavalkya28/GenAI-OmniRag?style=social)](https://github.com/yajnavalkya28/GenAI-OmniRag/stargazers)
+
+---
 <div align="center">
   <strong>Made with ❤️ by Yajnavalkya</strong>
 </div>
