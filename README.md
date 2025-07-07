@@ -298,6 +298,15 @@ tesseract --version
 - [ ] Mobile app development
 - [ ] API endpoint creation
 
+### 🌟 Star to Get Updates!
+Star this repository to receive notifications about:
+- 🚀 New features and updates
+- 🐛 Bug fixes and improvements  
+- 📚 Documentation updates
+- 💡 Usage tips and tricks
+
+[⭐ Star Now!](https://github.com/yourusername/GenAI-OmniRAG)
+
 ## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=yourusername/GenAI-OmniRAG&type=Date)](https://star-history.com/#yourusername/GenAI-OmniRAG&Date)
@@ -307,3 +316,4 @@ tesseract --version
 **Made with ❤️ by Yajnavalkya**
 
 *If you find this project helpful, please consider giving it a star ⭐*
+
