@@ -5,67 +5,8 @@
 
 > **Chat with any document in multiple languages** - Upload PDFs, images, web pages, or YouTube videos and get instant AI-powered insights with multilingual support.
 
-## 📸 Screenshots
-
-<div align="center">
-  <img src="screenshots/main-interface.png" alt="Main Interface" width="800"/>
-  <p><em>Main application interface with document upload and language selection</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/file-upload.png" alt="File Upload" width="800"/>
-  <p><em>Multi-format file upload support (PDF, DOCX, Images) and URL input</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/document-processing.png" alt="Document Processing" width="800"/>
-  <p><em>Document processing with progress indicators and content indexing</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/summary-generation.png" alt="Summary Generation" width="800"/>
-  <p><em>AI-generated markdown summary with adjustable length settings</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/text-to-speech.png" alt="Text-to-Speech" width="800"/>
-  <p><em>Text-to-speech functionality for hearing summaries in multiple languages</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/chat-interface.png" alt="Interactive Chat" width="800"/>
-  <p><em>RAG-powered chat interface for querying document content</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/multilingual-support.png" alt="Multilingual Support" width="800"/>
-  <p><em>Language selection and multilingual content translation</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/ocr-processing.png" alt="OCR Processing" width="800"/>
-  <p><em>OCR text extraction from images using Tesseract</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/youtube-transcript.png" alt="YouTube Processing" width="800"/>
-  <p><em>YouTube video transcript extraction and processing</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/export-options.png" alt="Export Options" width="800"/>
-  <p><em>Session report export as DOCX and JSON formats</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/web-scraping.png" alt="Web Scraping" width="800"/>
-  <p><em>Web page content extraction and processing</em></p>
-</div>
-
-<div align="center">
-  <img src="screenshots/error-handling.png" alt="Error Handling" width="800"/>
-  <p><em>Robust error handling for various file types and processing issues</em></p>
-</div>
+## View Steamlit APP
+https://genai-omnirag.streamlit.app/?embed_options=show_colored_line,show_toolbar,show_padding,dark_theme,show_footer
 
 ## 🌟 Features
 
@@ -282,10 +223,6 @@ pip install -r requirements.txt
 python -m pytest tests/
 ```
 
-## 📄 License
-
-This project is open source and available under no specific license.
-
 ## 🙏 Acknowledgments
 
 - **Groq** for the blazing-fast LPU™ inference engine
@@ -297,7 +234,6 @@ This project is open source and available under no specific license.
 ## 📞 Support
 
 - 🐛 **Bug Reports**: [Create an issue](https://github.com/yajnavalkya28/GenAI-OmniRag/issues)
-- 💡 **Feature Requests**: [Start a discussion](https://github.com/yajnavalkya28/GenAI-OmniRag/discussions)
 - 📧 **Contact**: [yajnavalkyamaddi2006@gmail.com](mailto:yajnavalkyamaddi2006@gmail.com)
 
 ## 🗺️ Roadmap
