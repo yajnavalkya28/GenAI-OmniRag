@@ -305,7 +305,7 @@ Star this repository to receive notifications about:
 - 📚 Documentation updates
 - 💡 Usage tips and tricks
 
-[⭐ Star Now!](https://github.com/yourusername/GenAI-OmniRAG)
+[⭐ Star Now!](https://github.com/yajnavalkya28/GenAI-OmniRAG)
 
 ## 🌟 Star History
 
