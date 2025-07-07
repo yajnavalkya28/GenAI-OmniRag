@@ -1,12 +1,12 @@
 # ⚡ OmniRAG: Multilingual AI Document Assistant
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://genai-omnirag.streamlit.app/))
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
 > **Chat with any document in multiple languages** - Upload PDFs, images, web pages, or YouTube videos and get instant AI-powered insights with multilingual support.
 
 ## View Steamlit APP
-<p align="center">
+<p align="left">
   <a href="https://genai-omnirag.streamlit.app/?embed_options=show_colored_line,show_toolbar,show_padding,dark_theme,show_footer">
     <img src="https://img.shields.io/badge/Launch%20OmniRAG-Streamlit-darkgreen?style=for-the-badge&logo=streamlit" alt="Launch App">
   </a>
